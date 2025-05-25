@@ -13,15 +13,17 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-use LastEditsMetabox\Admin\Hooks;
-
 require 'vendor/autoload.php';
+
+use LastEditsMetabox\Admin\Hooks;
 
 define('LEM_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
 // Initiate the Last Edits Metabox hooks
-$hooks = new Hooks();
-$hooks->init();
+if ( class_exists( 'Hooks' ) ) {
+    $hooks = new Hooks();
+    $hooks->init();
+}
 
 /**
  * Enqueue the styles for the metabox in the WordPress admin.
