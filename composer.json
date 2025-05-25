@@ -1,0 +1,18 @@
+{
+    "name": "devagus/last-edits-metabox",
+    "description": "A plugin to add a last edits metabox to the WordPress admin dashboard.",
+    "type": "wordpress-plugin",
+    "autoload": {
+        "psr-4": {
+            "LastEditsMetabox\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Agus Priyono",
+            "email": "mas.aguspriyono@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
